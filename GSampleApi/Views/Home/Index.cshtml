@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Google API Drive</h2>
+
+<button type="button" id="pick">Pick File</button>
+<div id="result"></div>
+<script src="~/Scripts/filepicker.js"></script>
+
+<script>
+    function initPicker() {
+        var picker = new FilePicker({
+            apiKey: 'AIzaSyDDMiGEZyAceYt6P3rndDZ6V6w0DgyfGyM',
+            clientId: '306209418293-su4m66ebc40jhfs1p13ajtm47b258m5d',
+            buttonEl: document.getElementById('pick')
+            //onSelect: function (file) {
+            //    alert('Selected' + file.title + '\n' + 'File ID ' + file.id);
+            //}
+        });
+    }
+</script>
+
+
+<script src="https://www.google.com/jsapi?key=AIzaSyDDMiGEZyAceYt6P3rndDZ6V6w0DgyfGyM"></script>
+<script src="https://apis.google.com/js/client.js?onload=initPicker"></script>
